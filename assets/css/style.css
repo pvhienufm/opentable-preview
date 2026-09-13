@@ -17,6 +17,7 @@ body{
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   position:relative;
+  overflow-x:hidden;   /* guard against any accidental horizontal scroll */
 }
 body > *{ position:relative; z-index:2; }
 
@@ -60,10 +61,35 @@ h1,h2,h3{ margin:0; font-weight:400; }
 .brand__ring{ width:36px; height:36px; flex:none; }
 .brand__name{ font-family:var(--serif); font-weight:500; font-size:1.45rem; letter-spacing:0.02em; line-height:1; }
 .brand__sub{ display:block; font-family:var(--sans); font-size:0.56rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--copper); margin-top:5px; }
+@media(max-width:520px){ .brand__sub{ display:none; } }
 .mainnav{ display:flex; align-items:center; gap:clamp(1rem,2.4vw,2rem); }
 .mainnav a{ font-family:var(--sans); font-weight:500; font-size:0.9rem; color:var(--ink-soft); transition:color .15s; }
 .mainnav a:hover{ color:var(--ink); }
-@media(max-width:940px){ .mainnav, .topbar .btn{ display:none; } }
+.mainnav__cta{ display:none; }
+.navtoggle{
+  display:none; width:44px; height:44px; border:1px solid var(--line); border-radius:3px;
+  background:var(--paper); cursor:pointer; padding:0; align-items:center; justify-content:center;
+}
+.navtoggle span{ position:relative; width:20px; height:1.5px; background:var(--ink); transition:.2s; }
+.navtoggle span::before,.navtoggle span::after{ content:""; position:absolute; left:0; width:20px; height:1.5px; background:var(--ink); transition:.2s; }
+.navtoggle span::before{ top:-6px; } .navtoggle span::after{ top:6px; }
+.topbar.nav-open .navtoggle span{ background:transparent; }
+.topbar.nav-open .navtoggle span::before{ top:0; transform:rotate(45deg); }
+.topbar.nav-open .navtoggle span::after{ top:0; transform:rotate(-45deg); }
+
+@media(max-width:940px){
+  .navtoggle{ display:inline-flex; }
+  .topbar > .btn{ display:none; }
+  .mainnav{
+    display:none; position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; align-items:stretch; gap:0;
+    background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:0.5rem var(--gutter) 1.25rem; box-shadow:0 20px 30px -24px rgba(20,24,27,0.4);
+  }
+  .topbar.nav-open .mainnav{ display:flex; }
+  .mainnav a{ padding:0.9rem 0; font-size:1rem; border-bottom:1px solid var(--line); }
+  .mainnav__cta{ display:inline-flex; justify-content:center; margin-top:1rem; border-bottom:0 !important; }
+}
 
 /* ============================================================
    BUTTONS
@@ -102,6 +128,13 @@ h1,h2,h3{ margin:0; font-weight:400; }
 /* the table graphic band */
 .tablewrap{ margin-top:clamp(2rem,4vw,3.5rem); }
 .tablefig{ width:100%; height:auto; display:block; }
+.seats-m{ display:none; }
+@media(max-width:640px){
+  .tablefig{ display:none; }
+  .seats-m{ display:block; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:1.25rem 0; }
+  .seats-m__k{ display:block; font-family:var(--sans); font-weight:600; font-size:0.66rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--copper); margin-bottom:0.5rem; }
+  .seats-m__row{ font-family:var(--serif); font-weight:500; font-size:1.05rem; line-height:1.5; }
+}
 .hero__foot{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:clamp(2rem,4vw,3rem); border-top:1px solid var(--line); }
 .hero__foot div{ padding:1.5rem 1.5rem 0; border-left:1px solid var(--line); }
 .hero__foot div:first-child{ border-left:0; padding-left:0; }
@@ -314,7 +347,7 @@ h1,h2,h3{ margin:0; font-weight:400; }
 .redline:first-child{ border-top:0; }
 .redline__not{
   text-align:right; font-family:var(--serif); font-size:clamp(1.1rem,2.2vw,1.75rem);
-  color:rgba(243,236,222,0.4); position:relative; letter-spacing:-0.01em; white-space:nowrap;
+  color:rgba(243,236,222,0.4); position:relative; letter-spacing:-0.01em;
 }
 .redline__not span{ position:relative; }
 .redline__not span::after{
@@ -324,7 +357,7 @@ h1,h2,h3{ margin:0; font-weight:400; }
 }
 .redline__arrow{ text-align:center; color:var(--copper); font-family:var(--serif); font-size:1.4rem; }
 .redline__is{ font-family:var(--serif); font-style:italic; font-size:clamp(1.25rem,2.6vw,2.05rem); letter-spacing:-0.01em; }
-@media(max-width:640px){
+@media(max-width:760px){
   .redline{ grid-template-columns:1fr; gap:0.15rem; padding:0.9rem 0; }
   .redline__not{ text-align:left; font-size:1.05rem; }
   .redline__arrow{ text-align:left; font-size:1rem; line-height:1; }
@@ -378,9 +411,9 @@ h1,h2,h3{ margin:0; font-weight:400; }
 .stp__lab{ font-family:var(--sans); font-weight:600; font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); }
 .stp--on .stp__dot{ background:var(--copper); border-color:var(--copper); color:#fff; }
 .stp--on .stp__lab{ color:var(--ink); }
-.stp__bar{ flex:1 1 auto; height:2px; background:var(--line); min-width:20px; }
+.stp__bar{ flex:1 1 auto; height:2px; background:var(--line); min-width:14px; }
 .stp__bar--on{ background:var(--copper); }
-@media(max-width:560px){ .stp{ width:3.5rem; } .stp__dot{ width:38px; height:38px; } }
+@media(max-width:560px){ .stepper{ max-width:100%; } .stp{ width:3rem; } .stp__dot{ width:34px; height:34px; font-size:1rem; } .stp__lab{ font-size:0.52rem; } }
 
 /* ============================================================
    INVITE v2 — reservation card

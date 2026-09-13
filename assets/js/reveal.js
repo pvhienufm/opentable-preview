@@ -30,12 +30,26 @@
     nodes.forEach(function (n) { io.observe(n); });
   }
 
-  /* ---- 2. Header condense on scroll ---- */
+  /* ---- 2. Header condense on scroll + mobile nav toggle ---- */
   var bar = document.querySelector('.topbar');
   if (bar) {
     var onScroll = function () { bar.classList.toggle('is-stuck', window.scrollY > 24); };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+
+    var tog = bar.querySelector('.navtoggle');
+    if (tog) {
+      tog.addEventListener('click', function () {
+        var open = bar.classList.toggle('nav-open');
+        tog.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      bar.querySelectorAll('.mainnav a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          bar.classList.remove('nav-open');
+          tog.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
   }
 
   /* ---- 3. Seamless ticker marquee ---- */
