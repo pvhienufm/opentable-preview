@@ -33,7 +33,7 @@
   --border: var(--border-hairline);
 
   /* layout */
-  --maxw: var(--container-wide);   /* 1360 */
+  --maxw: var(--container-max);    /* 1200 — editorial content column */
   --gutter: clamp(1.25rem, 5vw, 3rem);
 
   /* my type scale (kept) */
