@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open Table — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand__ring" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="none" stroke-width="8" stroke-linecap="round">
+        <circle cx="50" cy="50" r="40" stroke="#B4562B" stroke-dasharray="42 209" transform="rotate(-72 50 50)"/>
+        <circle cx="50" cy="50" r="40" stroke="#B8A58F" stroke-dasharray="42 209" transform="rotate(18 50 50)"/>
+        <circle cx="50" cy="50" r="40" stroke="#8C8B82" stroke-dasharray="42 209" transform="rotate(108 50 50)"/>
+        <circle cx="50" cy="50" r="40" stroke="#201E19" stroke-dasharray="42 209" transform="rotate(198 50 50)"/>
+      </g>
+    </svg>
+    <span><span class="brand__name">Open Table</span><span class="brand__sub">Design System</span></span>
+  </a>
+  <nav class="mainnav">
+    <a href="#logo">Logo</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#buttons">Buttons</a><a href="#motif">Motif</a>
+  </nav>
+  <a class="btn btn--fill" href="index.html">View homepage</a>
+</header>
+
+<!-- INTRO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__head">
+      <div>
+        <span class="kicker">Brand system · “The Table”</span>
+        <h1 class="mega">The design<br><em>system.</em></h1>
+      </div>
+      <div class="hero__aside">
+        <p class="lead">One idea drives everything: the table. Seating, invitation, the right people in the room. Warm paper, Newsreader serif, restrained copper — built to feel founder-led, not templated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section class="sec" id="logo">
+  <div class="wrap">
+    <div class="sechead"><span class="seatno">i.</span><span class="kicker kicker--ink">Logo &amp; mark</span></div>
+    <h2 class="h2" style="max-width:24ch;margin-bottom:2rem;">A method symbol — the open table, four EASI™ segments.</h2>
+    <div class="grid-3">
+      <div class="tile" style="text-align:center;">
+        <span class="kicker">Primary lockup</span>
+        <svg class="brand__ring" style="width:72px;height:72px;margin:0 auto;" viewBox="0 0 100 100"><g fill="none" stroke-width="7" stroke-linecap="round"><circle cx="50" cy="50" r="40" stroke="#B4562B" stroke-dasharray="42 209" transform="rotate(-72 50 50)"/><circle cx="50" cy="50" r="40" stroke="#B8A58F" stroke-dasharray="42 209" transform="rotate(18 50 50)"/><circle cx="50" cy="50" r="40" stroke="#8C8B82" stroke-dasharray="42 209" transform="rotate(108 50 50)"/><circle cx="50" cy="50" r="40" stroke="#201E19" stroke-dasharray="42 209" transform="rotate(198 50 50)"/></g></svg>
+        <div style="margin-top:1rem;"><span class="brand__name" style="font-size:1.4rem;">Open Table</span><span class="brand__sub" style="display:block;margin-top:6px;">APAC Market Entry &amp; Growth Advisory</span></div>
+      </div>
+      <div class="tile" style="text-align:center;background:var(--ink);border-color:var(--ink);">
+        <span class="kicker">Reversed</span>
+        <svg class="brand__ring" style="width:72px;height:72px;margin:0 auto;" viewBox="0 0 100 100"><g fill="none" stroke-width="7" stroke-linecap="round"><circle cx="50" cy="50" r="40" stroke="#B4562B" stroke-dasharray="42 209" transform="rotate(-72 50 50)"/><circle cx="50" cy="50" r="40" stroke="#B8A58F" stroke-dasharray="42 209" transform="rotate(18 50 50)"/><circle cx="50" cy="50" r="40" stroke="#DAD7CF" stroke-dasharray="42 209" transform="rotate(108 50 50)"/><circle cx="50" cy="50" r="40" stroke="#F3ECDE" stroke-dasharray="42 209" transform="rotate(198 50 50)"/></g></svg>
+        <div style="margin-top:1rem;"><span class="brand__name" style="font-size:1.4rem;color:var(--paper);">Open Table</span></div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <span class="kicker">Mark / favicon</span>
+        <div style="display:flex;gap:1.5rem;justify-content:center;align-items:center;">
+          <svg class="brand__ring" style="width:52px;height:52px;" viewBox="0 0 100 100"><g fill="none" stroke-width="9" stroke-linecap="round"><circle cx="50" cy="50" r="40" stroke="#B4562B" stroke-dasharray="42 209" transform="rotate(-72 50 50)"/><circle cx="50" cy="50" r="40" stroke="#B8A58F" stroke-dasharray="42 209" transform="rotate(18 50 50)"/><circle cx="50" cy="50" r="40" stroke="#8C8B82" stroke-dasharray="42 209" transform="rotate(108 50 50)"/><circle cx="50" cy="50" r="40" stroke="#201E19" stroke-dasharray="42 209" transform="rotate(198 50 50)"/></g></svg>
+          <svg class="brand__ring" style="width:30px;height:30px;" viewBox="0 0 100 100"><g fill="none" stroke-width="11" stroke-linecap="round"><circle cx="50" cy="50" r="40" stroke="#B4562B" stroke-dasharray="42 209" transform="rotate(-72 50 50)"/><circle cx="50" cy="50" r="40" stroke="#B8A58F" stroke-dasharray="42 209" transform="rotate(18 50 50)"/><circle cx="50" cy="50" r="40" stroke="#8C8B82" stroke-dasharray="42 209" transform="rotate(108 50 50)"/><circle cx="50" cy="50" r="40" stroke="#201E19" stroke-dasharray="42 209" transform="rotate(198 50 50)"/></g></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOUR -->
+<section class="sec sec--panel" id="colour">
+  <div class="wrap">
+    <div class="sechead"><span class="seatno">ii.</span><span class="kicker kicker--ink">Colour</span></div>
+    <h2 class="h2" style="margin-bottom:2rem;">Warm paper, warm ink, copper as the relationship accent.</h2>
+    <div class="grid-4">
+      <div class="swatch"><div class="swatch__chip" style="background:#F3ECDE"></div><div class="swatch__meta"><b>Paper</b><code>#F3ECDE</code><small>Warm ivory ground</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#201E19"></div><div class="swatch__meta"><b>Ink</b><code>#201E19</code><small>Warm near-black authority</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#B4562B"></div><div class="swatch__meta"><b>Copper</b><code>#B4562B</code><small>Warmth · APAC accent</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#B8A58F"></div><div class="swatch__meta"><b>Taupe</b><code>#B8A58F</code><small>Relationship layer</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#DAD7CF"></div><div class="swatch__meta"><b>Stone</b><code>#DAD7CF</code><small>Partner network</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#E9DFCB"></div><div class="swatch__meta"><b>Paper 2</b><code>#E9DFCB</code><small>Panel / alternating</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#8C3E1D"></div><div class="swatch__meta"><b>Copper Ink</b><code>#8C3E1D</code><small>Pressed accent</small></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#5A544A"></div><div class="swatch__meta"><b>Ink Soft</b><code>#5A544A</code><small>Muted body text</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section class="sec" id="type">
+  <div class="wrap">
+    <div class="sechead"><span class="seatno">iii.</span><span class="kicker kicker--ink">Typography</span></div>
+    <h2 class="h2" style="margin-bottom:1.5rem;">Newsreader signature · Hanken Grotesk voice.</h2>
+    <div class="type-row"><div class="meta">Mega<br>Newsreader 300<br>clamp 51–128</div><div class="mega" style="font-size:clamp(2.5rem,6vw,4.5rem)">Take a seat at the <em>table.</em></div></div>
+    <div class="type-row"><div class="meta">H2<br>Newsreader 360<br>30–50</div><div class="h2">Every table has four sides.</div></div>
+    <div class="type-row"><div class="meta">Lead<br>Newsreader 340<br>18–24</div><div class="lead" style="max-width:50ch;">We help you enter Vietnam and selected APAC markets with the right people already in the room.</div></div>
+    <div class="type-row"><div class="meta">Body<br>Hanken 400<br>17 / 1.6</div><div class="body-sans">Serious clients don’t pay premium fees for an introduction. They pay because the wrong market or partner can cost time, money and credibility.</div></div>
+    <div class="type-row"><div class="meta">Kicker<br>Hanken 600<br>uppercase 0.24em</div><div><span class="kicker">The EASI™ Method</span> &nbsp;·&nbsp; <span class="seatno">iv.</span></div></div>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<section class="sec sec--panel" id="buttons">
+  <div class="wrap">
+    <div class="sechead"><span class="seatno">iv.</span><span class="kicker kicker--ink">Buttons &amp; links</span></div>
+    <div class="grid-2">
+      <div class="tile"><span class="kicker">On paper</span>
+        <div class="btn-row"><button class="btn btn--fill">Take a seat</button><button class="btn btn--copper">How it works</button><button class="btn btn--ghost">See the table</button></div>
+        <div style="margin-top:1.25rem;"><a class="underlink" href="#">Read the founder letter</a></div>
+      </div>
+      <div class="tile" style="background:var(--ink);border-color:var(--ink);"><span class="kicker">On ink</span>
+        <div class="btn-row"><button class="btn btn--copper">Reserve a seat</button><button class="btn btn--onink">See coverage</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTIF -->
+<section class="sec sec--ink" id="motif">
+  <div class="wrap">
+    <div class="sechead"><span class="seatno" style="color:var(--copper)">v.</span><span class="kicker">The signature motif</span></div>
+    <h2 class="h2" style="max-width:20ch;margin-bottom:2rem;">The table is the system — seating, not a hub diagram.</h2>
+    <svg viewBox="0 0 460 360" style="max-width:520px;margin:0 auto;" role="img" aria-label="Seating diagram motif">
+      <g stroke="#B4562B" stroke-width="1.2" opacity="0.75">
+        <line x1="230" y1="180" x2="230" y2="60"/><line x1="230" y1="180" x2="360" y2="120"/><line x1="230" y1="180" x2="360" y2="240"/><line x1="230" y1="180" x2="230" y2="300"/><line x1="230" y1="180" x2="100" y2="240"/><line x1="230" y1="180" x2="100" y2="120"/>
+      </g>
+      <circle cx="230" cy="180" r="56" fill="none" stroke="#F3ECDE" stroke-width="1.5"/>
+      <text x="230" y="185" text-anchor="middle" font-family="Newsreader, serif" font-size="16" fill="#F3ECDE">Open Table</text>
+      <g fill="#F3ECDE" text-anchor="middle" font-family="Hanken Grotesk, sans-serif" font-weight="600" font-size="11">
+        <circle cx="230" cy="60" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="230" y="64">VN</text>
+        <circle cx="360" cy="120" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="360" y="124">TH</text>
+        <circle cx="360" cy="240" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="360" y="244">SG</text>
+        <circle cx="230" cy="300" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="230" y="304">ID</text>
+        <circle cx="100" cy="240" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="100" y="244">MY</text>
+        <circle cx="100" cy="120" r="22" fill="none" stroke="#F3ECDE" stroke-width="1.2"/><text x="100" y="124">PH</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__legal" style="border:0;padding:0;">
+      <span>© 2026 Open Table — Design System · “The Table” concept</span>
+      <span><a href="index.html">View homepage →</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/reveal.js" defer></script>
+</body>
+</html>

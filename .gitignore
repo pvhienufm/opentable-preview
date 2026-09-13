@@ -1,0 +1,9 @@
+# Never publish confidential brand docs
+*.pdf
+
+# Not part of the static site (your WP infra + local tooling)
+claude-wp-abilities.php
+.claude/
+
+# OS junk
+.DS_Store

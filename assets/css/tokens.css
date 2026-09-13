@@ -1,0 +1,42 @@
+/* ============================================================
+   OPEN TABLE — Design Tokens  ·  "The Table" concept
+   ============================================================ */
+:root {
+  /* Warm paper + ink (not flat corporate white/beige) */
+  --paper:    #F3ECDE;   /* warm ivory ground            */
+  --paper-2:  #E9DFCB;   /* deeper panel                 */
+  --cream:    #FBF7EE;   /* raised surface               */
+  --ink:      #201E19;   /* warm near-black              */
+  --ink-soft: #5A544A;   /* muted body                   */
+  --line:     #D6C9AF;   /* warm hairline                */
+
+  /* Brand palette (from deck, slightly enriched) */
+  --copper:      #B4562B;
+  --copper-ink:  #8C3E1D;
+  --copper-tint: #E7D3C2;
+  --taupe:       #B8A58F;
+  --stone:       #DAD7CF;
+  --charcoal:    #201E19;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --text: var(--ink);
+  --muted: var(--ink-soft);
+  --accent: var(--copper);
+  --border: var(--line);
+
+  /* Type */
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans:  "Hanken Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
+
+  --fs-mega:  clamp(3.2rem, 1.4rem + 8vw, 8rem);
+  --fs-h1:    clamp(2.4rem, 1.4rem + 4vw, 4.5rem);
+  --fs-h2:    clamp(1.9rem, 1.3rem + 2.4vw, 3.1rem);
+  --fs-h3:    clamp(1.3rem, 1.05rem + 1vw, 1.7rem);
+  --fs-lead:  clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  --fs-body:  1.05rem;
+  --fs-small: 0.82rem;
+
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --maxw: 1320px;
+}
