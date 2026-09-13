@@ -1,0 +1,98 @@
+/* Open Table — Colour system.
+   Base brand palette from the Brand Positioning evaluation (V3):
+   Ivory, Charcoal, Copper, Taupe, Stone. Extended into a usable scale
+   with warm, harmonious tints/shades (kept in the same warm family). */
+:root {
+  /* ---- Brand base ---- */
+  --ivory: #F7F3EA;      /* client confidence / calm paper */
+  --charcoal: #1D2423;   /* commercial authority / ink */
+  --copper: #B85F33;     /* human warmth / APAC accent */
+  --taupe: #B8A58F;      /* grounded neutrality / relationship layer */
+  --stone: #DAD7CF;      /* partner network / secondary panels */
+
+  /* ---- Ivory / paper scale ---- */
+  --ivory-50:  #FCFAF4;  /* card / near-white warm */
+  --ivory-100: #F7F3EA;  /* page paper (= --ivory) */
+  --ivory-200: #F1EBDC;  /* deeper paper, sunken wells */
+  --ivory-300: #E9E1CE;
+
+  /* ---- Stone / neutral panels ---- */
+  --stone-100: #E7E4DC;
+  --stone-200: #DAD7CF;  /* = --stone */
+  --stone-300: #C9C4B8;  /* hairline on light, dividers */
+  --stone-400: #B4AE9F;
+
+  /* ---- Taupe / relationship neutral ---- */
+  --taupe-200: #D2C7B7;
+  --taupe-300: #C4B6A2;
+  --taupe-400: #B8A58F;  /* = --taupe */
+  --taupe-500: #9C8970;
+  --taupe-600: #7C6B55;
+
+  /* ---- Charcoal / ink scale ---- */
+  --charcoal-900: #141917;  /* deepest panel */
+  --charcoal-800: #1D2423;  /* = --charcoal, primary ink & dark surface */
+  --charcoal-700: #2C3432;  /* raised dark panel */
+  --ink-600: #3A403E;       /* strong body on light */
+  --ink-500: #565C59;       /* body */
+  --ink-400: #6B706C;       /* secondary / muted */
+  --ink-300: #8A8E89;       /* faint / captions */
+
+  /* ---- Copper / accent scale ---- */
+  --copper-050: #F6ECE4;
+  --copper-100: #EBD7C9;
+  --copper-200: #DDBBA4;
+  --copper-400: #C57A50;
+  --copper-500: #B85F33;   /* = --copper */
+  --copper-600: #9F4E27;   /* hover */
+  --copper-700: #85401F;   /* press / on-light emphasis */
+  --copper-on-dark: #D07A4B; /* copper legible on charcoal */
+
+  /* ---- Semantic status (kept warm, restrained) ---- */
+  --positive: #4F7256;     /* muted advisory green */
+  --positive-bg: #E4EAE1;
+  --caution: #B98328;      /* amber, warmer than copper */
+  --caution-bg: #F3E7CC;
+  --critical: #A23524;     /* deep terracotta-red, harmonised with copper */
+  --critical-bg: #F1DCD5;
+  --info: #4A5F6B;         /* slate, used sparingly */
+  --info-bg: #DFE6E8;
+
+  /* ---- Semantic surface aliases ---- */
+  --surface-page: var(--ivory-100);
+  --surface-raised: var(--ivory-50);
+  --surface-card: var(--ivory-50);
+  --surface-sunken: var(--ivory-200);
+  --surface-panel: var(--stone-200);
+  --surface-panel-soft: var(--stone-100);
+  --surface-dark: var(--charcoal-800);
+  --surface-dark-raised: var(--charcoal-700);
+  --surface-dark-deep: var(--charcoal-900);
+
+  /* ---- Semantic text aliases ---- */
+  --text-primary: var(--charcoal-800);
+  --text-body: var(--ink-600);
+  --text-secondary: var(--ink-400);
+  --text-faint: var(--ink-300);
+  --text-inverse: var(--ivory-100);
+  --text-inverse-soft: rgba(247, 243, 234, 0.68);
+  --text-accent: var(--copper-600);
+  --text-accent-on-dark: var(--copper-on-dark);
+
+  /* ---- Borders & lines ---- */
+  --border-hairline: rgba(29, 36, 35, 0.12);
+  --border-line: rgba(29, 36, 35, 0.18);
+  --border-strong: var(--taupe-400);
+  --border-accent: var(--copper-500);
+  --border-on-dark: rgba(247, 243, 234, 0.16);
+  --rule-copper: var(--copper-500);
+
+  /* ---- Accent aliases ---- */
+  --accent: var(--copper-500);
+  --accent-hover: var(--copper-600);
+  --accent-press: var(--copper-700);
+  --accent-soft: var(--copper-050);
+
+  /* ---- Focus ring ---- */
+  --focus-ring: rgba(184, 95, 51, 0.45);
+}

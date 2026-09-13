@@ -5,5 +5,8 @@
 claude-wp-abilities.php
 .claude/
 
+# Proprietary design-system source (only the copied tokens/assets in assets/ ship)
+_design-system-official/
+
 # OS junk
 .DS_Store

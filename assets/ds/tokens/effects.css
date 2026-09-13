@@ -1,0 +1,31 @@
+/* Open Table — Effects: radius, shadow, motion.
+   Premium/editorial = restrained rounding, warm low-alpha shadows. */
+:root {
+  /* Corner radii — small and precise; pills only for tags */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-w: 1px;
+  --border-w-strong: 1.5px;
+
+  /* Shadows — warm charcoal, soft, never bluish */
+  --shadow-xs: 0 1px 2px rgba(29, 36, 35, 0.06);
+  --shadow-sm: 0 1px 3px rgba(29, 36, 35, 0.08), 0 1px 2px rgba(29, 36, 35, 0.04);
+  --shadow-md: 0 4px 14px rgba(29, 36, 35, 0.08), 0 2px 5px rgba(29, 36, 35, 0.05);
+  --shadow-lg: 0 14px 40px rgba(29, 36, 35, 0.12), 0 4px 12px rgba(29, 36, 35, 0.06);
+  --shadow-copper: 0 8px 24px rgba(133, 64, 31, 0.22);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* Motion — calm, diplomatic; no bounce */
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1); /* @kind other */
+  --dur-fast: 140ms; /* @kind other */
+  --dur-base: 240ms; /* @kind other */
+  --dur-slow: 420ms; /* @kind other */
+}

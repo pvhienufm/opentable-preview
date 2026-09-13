@@ -1,0 +1,22 @@
+/* Open Table — Spacing & layout. 4px base rhythm. */
+:root {
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 3rem;      /* 48 */
+  --space-8: 4rem;      /* 64 */
+  --space-9: 6rem;      /* 96 */
+  --space-10: 8rem;     /* 128 */
+
+  /* Layout */
+  --container-max: 1200px;   /* editorial content column max */
+  --container-wide: 1360px;  /* full sections */
+  --container-prose: 680px;  /* long-form reading measure */
+  --gutter: 1.5rem;          /* mobile side padding */
+  --gutter-lg: 3rem;         /* desktop side padding */
+  --section-y: 6rem;         /* vertical rhythm between sections */
+}

@@ -1,0 +1,52 @@
+/* Open Table — Typography.
+   Signature serif (Spectral) for brand/editorial voice.
+   Operating sans (Hanken Grotesk) for descriptors, labels, UI, data.
+   Mono (IBM Plex Mono) for indices, numerals and kickers. */
+:root {
+  --font-serif: "Spectral", Georgia, "Times New Roman", serif;
+  --font-sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+
+  /* Roles */
+  --font-display: var(--font-serif);   /* headlines, hero, brand signature */
+  --font-body: var(--font-sans);       /* running UI + operating copy */
+  --font-prose: var(--font-serif);     /* long-form editorial prose */
+  --font-label: var(--font-sans);      /* labels, buttons, nav */
+  --font-index: var(--font-mono);      /* section indices, numerals, kickers */
+
+  /* Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+
+  /* Type scale (fluid-friendly px). Display uses serif, UI uses sans. */
+  --text-hero: 4.5rem;      /* 72px — website hero */
+  --text-display: 3.25rem;  /* 52px */
+  --text-h1: 2.5rem;        /* 40px */
+  --text-h2: 1.9rem;        /* ~30px */
+  --text-h3: 1.4rem;        /* ~22px */
+  --text-h4: 1.15rem;       /* ~18px */
+  --text-lead: 1.3rem;      /* 21px intro copy */
+  --text-body-lg: 1.0625rem;/* 17px */
+  --text-body-md: 0.9375rem;/* 15px base UI */
+  --text-body-sm: 0.8125rem;/* 13px */
+  --text-caption: 0.75rem;  /* 12px */
+  --text-micro: 0.6875rem;  /* 11px, tracked labels */
+
+  /* Line heights */
+  --leading-tight: 1.05;    /* display headlines */
+  --leading-snug: 1.2;      /* subheads */
+  --leading-normal: 1.5;    /* UI */
+  --leading-relaxed: 1.7;   /* editorial prose */
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;    /* large serif display */
+  --tracking-snug: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;      /* sans labels */
+  --tracking-wider: 0.16em;     /* uppercase kickers */
+  --tracking-widest: 0.28em;    /* wordmark, tiny tracked labels */
+}

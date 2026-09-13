@@ -1,43 +1,47 @@
 /* ============================================================
-   OPEN TABLE — Design Tokens
-   Professional / high-contrast consulting direction
+   OPEN TABLE — bridge tokens
+   Maps this site's variable names onto the OFFICIAL design-system
+   tokens (assets/ds/tokens/*.css). Warm ivory · Spectral · Hanken.
    ============================================================ */
 :root {
-  /* Crisp, high-contrast base (was warm beige — killed the punch) */
-  --paper:    #FFFFFF;   /* clean ground                 */
-  --paper-2:  #F4F3EF;   /* subtle light section         */
-  --cream:    #FAFAF8;   /* raised surface               */
-  --ink:      #14181B;   /* near-black authority         */
-  --ink-soft: #565C62;   /* muted body                   */
-  --line:     #E4E3DE;   /* crisp light hairline         */
+  /* surfaces */
+  --paper:    var(--surface-page);     /* ivory #F7F3EA */
+  --paper-2:  var(--surface-sunken);   /* deeper paper */
+  --cream:    var(--surface-card);     /* ivory-50 raised */
+  --ink:      var(--charcoal-800);     /* #1D2423 */
+  --ink-soft: var(--ink-500);
+  --line:     var(--border-hairline);
 
-  /* Accent — copper, used decisively */
-  --copper:      #B85F33;
-  --copper-ink:  #96431F;   /* for small text on white   */
-  --copper-tint: #F0E0D5;
-  --taupe:       #B8A58F;
-  --stone:       #DAD7CF;
-  --charcoal:    #14181B;
+  /* accent + neutrals */
+  --copper:      var(--copper-500);
+  --copper-ink:  var(--copper-700);
+  --copper-tint: var(--copper-050);
+  --taupe:       var(--taupe-400);
+  --stone:       var(--stone-200);
+  --charcoal:    var(--charcoal-800);
 
-  /* Semantic */
-  --bg: var(--paper);
-  --text: var(--ink);
-  --muted: var(--ink-soft);
-  --accent: var(--copper);
-  --border: var(--line);
+  /* type families (official) */
+  --serif: var(--font-serif);   /* Spectral */
+  --sans:  var(--font-sans);    /* Hanken Grotesk */
+  --mono:  var(--font-index);   /* IBM Plex Mono */
 
-  /* Type */
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --sans:  "Hanken Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
+  /* semantic */
+  --bg: var(--surface-page);
+  --text: var(--charcoal-800);
+  --muted: var(--ink-500);
+  --accent: var(--copper-500);
+  --border: var(--border-hairline);
 
-  --fs-mega:  clamp(3.2rem, 1.4rem + 8vw, 8rem);
-  --fs-h1:    clamp(2.4rem, 1.4rem + 4vw, 4.5rem);
-  --fs-h2:    clamp(1.9rem, 1.3rem + 2.4vw, 3.1rem);
-  --fs-h3:    clamp(1.3rem, 1.05rem + 1vw, 1.7rem);
-  --fs-lead:  clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
-  --fs-body:  1.05rem;
-  --fs-small: 0.82rem;
+  /* layout */
+  --maxw: var(--container-wide);   /* 1360 */
+  --gutter: clamp(1.25rem, 5vw, 3rem);
 
-  --gutter: clamp(1.25rem, 5vw, 5rem);
-  --maxw: 1320px;
+  /* my type scale (kept) */
+  --fs-mega:  clamp(3rem, 1.4rem + 6vw, 5rem);
+  --fs-h1:    clamp(2.2rem, 1.4rem + 3vw, 3.25rem);
+  --fs-h2:    clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
+  --fs-h3:    clamp(1.25rem, 1.05rem + 0.9vw, 1.5rem);
+  --fs-lead:  var(--text-lead);
+  --fs-body:  var(--text-body-lg);
+  --fs-small: var(--text-body-sm);
 }
