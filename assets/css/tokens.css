@@ -1,22 +1,23 @@
 /* ============================================================
-   OPEN TABLE — Design Tokens  ·  "The Table" concept
+   OPEN TABLE — Design Tokens
+   Professional / high-contrast consulting direction
    ============================================================ */
 :root {
-  /* Warm paper + ink (not flat corporate white/beige) */
-  --paper:    #F3ECDE;   /* warm ivory ground            */
-  --paper-2:  #E9DFCB;   /* deeper panel                 */
-  --cream:    #FBF7EE;   /* raised surface               */
-  --ink:      #201E19;   /* warm near-black              */
-  --ink-soft: #5A544A;   /* muted body                   */
-  --line:     #D6C9AF;   /* warm hairline                */
+  /* Crisp, high-contrast base (was warm beige — killed the punch) */
+  --paper:    #FFFFFF;   /* clean ground                 */
+  --paper-2:  #F4F3EF;   /* subtle light section         */
+  --cream:    #FAFAF8;   /* raised surface               */
+  --ink:      #14181B;   /* near-black authority         */
+  --ink-soft: #565C62;   /* muted body                   */
+  --line:     #E4E3DE;   /* crisp light hairline         */
 
-  /* Brand palette (from deck, slightly enriched) */
-  --copper:      #B4562B;
-  --copper-ink:  #8C3E1D;
-  --copper-tint: #E7D3C2;
+  /* Accent — copper, used decisively */
+  --copper:      #B85F33;
+  --copper-ink:  #96431F;   /* for small text on white   */
+  --copper-tint: #F0E0D5;
   --taupe:       #B8A58F;
   --stone:       #DAD7CF;
-  --charcoal:    #201E19;
+  --charcoal:    #14181B;
 
   /* Semantic */
   --bg: var(--paper);
