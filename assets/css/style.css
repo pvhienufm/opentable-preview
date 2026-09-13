@@ -1,5 +1,5 @@
 /* ============================================================
-   OPEN TABLE — "The Table" concept
+   OPEN TABLE - "The Table" concept
    Built around the seating metaphor. Layout rhythm varies
    per section on purpose (anti-template).
    ============================================================ */
@@ -120,7 +120,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .btn--lg{ padding:1.05rem 1.9rem; font-size:0.95rem; }
 
 /* ============================================================
-   NAV (official — real logo, solid ivory, working mobile menu)
+   NAV (official - real logo, solid ivory, working mobile menu)
    ============================================================ */
 .nav{ position:sticky; top:0; z-index:70; background:var(--surface-page); border-bottom:1px solid var(--border-hairline); }
 .nav__inner{ display:flex; align-items:center; justify-content:space-between; gap:2rem; max-width:var(--container-wide); margin:0 auto; padding:0.8rem var(--gutter); }
@@ -154,7 +154,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 }
 
 /* ============================================================
-   HERO (official dark — founder portrait + copper glow)
+   HERO (official dark - founder portrait + copper glow)
    ============================================================ */
 .herod{ position:relative; background:var(--charcoal-900); color:var(--text-inverse); overflow:hidden; }
 .herod__glow{ position:absolute; inset:0; pointer-events:none;
@@ -193,7 +193,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 }
 
 /* ============================================================
-   HERO  —  the table sits under the invitation
+   HERO  -  the table sits under the invitation
    ============================================================ */
 .hero{ padding:clamp(2.5rem,6vw,5rem) 0 0; border-bottom:1px solid var(--border); overflow:hidden; }
 .hero__head{ display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:end; }
@@ -244,7 +244,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .sechead .seatno{ flex:none; }
 
 /* ============================================================
-   METHOD — four sides of the table
+   METHOD - four sides of the table
    ============================================================ */
 .method-intro{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,4vw,4rem); align-items:end; margin-bottom:3rem; }
 @media(max-width:780px){ .method-intro{ grid-template-columns:1fr; } }
@@ -260,7 +260,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .side__tag{ font-family:var(--sans); font-weight:600; font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--copper); margin-top:0.75rem; }
 
 /* ============================================================
-   POSITION — big typographic Not / Is
+   POSITION - big typographic Not / Is
    ============================================================ */
 .stance{ display:grid; gap:0; }
 .stance__row{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1rem,4vw,4rem); padding:1.5rem 0; border-top:1px solid rgba(243,236,222,0.18); align-items:baseline; }
@@ -271,11 +271,14 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 @media(max-width:640px){ .stance__row{ grid-template-columns:1fr; gap:0.4rem; } }
 
 /* ============================================================
-   FOUNDER — a signed letter
+   FOUNDER - a signed letter
    ============================================================ */
 .letter{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:clamp(2rem,5vw,4.5rem); align-items:start; }
-@media(max-width:820px){ .letter{ grid-template-columns:1fr; } }
 .letter__aside{ position:sticky; top:120px; }
+@media(max-width:820px){
+  .letter{ grid-template-columns:1fr; }
+  .letter__aside{ position:static; top:auto; }   /* no floating over sections on mobile */
+}
 .portrait{ margin:0; border:1px solid var(--ink); padding:0.55rem; background:var(--cream); }
 .portrait img{
   display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:54% 32%;
@@ -296,7 +299,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .sign__role{ font-family:var(--sans); font-weight:600; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-soft); margin-top:0.35rem; }
 
 /* ============================================================
-   ENGAGEMENTS — index rows
+   ENGAGEMENTS - index rows
    ============================================================ */
 .rows{ border-top:1px solid var(--ink); }
 .row{
@@ -312,7 +315,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 @media(max-width:680px){ .row{ grid-template-columns:2.5rem 1fr; } .row__tag{ display:none; } }
 
 /* ============================================================
-   PARTNERS — the seating diagram (big table)
+   PARTNERS - the seating diagram (big table)
    ============================================================ */
 .partners{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
 @media(max-width:860px){ .partners{ grid-template-columns:1fr; } }
@@ -323,7 +326,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .bigtable .ctr-sub{ font-family:var(--sans); font-weight:600; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; }
 
 /* ============================================================
-   MARKETS — tiers
+   MARKETS - tiers
    ============================================================ */
 .tiers{ border-top:1px solid var(--ink); }
 .tier{ display:grid; grid-template-columns:13rem 1fr; gap:1.5rem; padding:1.75rem 0; border-bottom:1px solid var(--line); align-items:baseline; }
@@ -347,7 +350,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .path__seq{ font-family:var(--sans); font-weight:600; font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--copper); margin-top:1.25rem; padding-top:1rem; border-top:1px solid var(--line); }
 
 /* ============================================================
-   CONSULTATION — a place card / invitation
+   CONSULTATION - a place card / invitation
    ============================================================ */
 .invite{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
 @media(max-width:820px){ .invite{ grid-template-columns:1fr; } }
@@ -379,7 +382,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 .foot__tag{ font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--paper); margin-top:1rem; }
 
 /* ============================================================
-   METHOD — four sides of the table (cross layout)
+   METHOD - four sides of the table (cross layout)
    ============================================================ */
 .easitable{
   display:grid;
@@ -423,7 +426,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 }
 
 /* ============================================================
-   STANCE v2 — editorial redlines
+   STANCE v2 - editorial redlines
    ============================================================ */
 .redlines{ display:grid; gap:clamp(0.5rem,1.6vw,1.1rem); }
 .redline{
@@ -450,7 +453,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 }
 
 /* ============================================================
-   ENGAGEMENTS v2 — the menu
+   ENGAGEMENTS v2 - the menu
    ============================================================ */
 .menu{ border-top:1px solid var(--ink); }
 .menu__item{ padding:1.35rem 0.25rem; border-bottom:1px solid var(--line); transition:padding-left .18s, background .18s; }
@@ -464,7 +467,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 @media(max-width:560px){ .menu__dots{ display:none; } .menu__row{ flex-wrap:wrap; gap:0.4rem 0.75rem; } .menu__desc{ padding-left:0; } }
 
 /* ============================================================
-   MARKETS v2 — tier bands with chips
+   MARKETS v2 - tier bands with chips
    ============================================================ */
 .mtiers{ border-top:1px solid var(--ink); }
 .mtier{ display:grid; grid-template-columns:15rem 1fr; gap:1.5rem; align-items:start; padding:1.9rem 0; border-bottom:1px solid var(--line); }
@@ -479,7 +482,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 @media(max-width:680px){ .mtier{ grid-template-columns:1fr; gap:0.75rem; } }
 
 /* ============================================================
-   PATHWAYS v2 — EASI process bar
+   PATHWAYS v2 - EASI process bar
    ============================================================ */
 .pjourney{ border-top:1px solid var(--ink); }
 .pj{ padding:1.9rem 0; border-bottom:1px solid var(--line); }
@@ -502,7 +505,7 @@ h1,h2,h3{ margin:0; font-weight:400; overflow-wrap:break-word; }
 @media(max-width:560px){ .stepper{ max-width:100%; } .stp{ width:3rem; } .stp__dot{ width:34px; height:34px; font-size:1rem; } .stp__lab{ font-size:0.52rem; } }
 
 /* ============================================================
-   INVITE v2 — reservation card
+   INVITE v2 - reservation card
    ============================================================ */
 .rescard{
   background:var(--cream); color:var(--ink); border:1px solid var(--copper);

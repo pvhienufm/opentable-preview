@@ -1,4 +1,4 @@
-/* Open Table — tasteful motion. Vanilla, no deps. Respects reduced-motion. */
+/* Open Table - tasteful motion. Vanilla, no deps. Respects reduced-motion. */
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
